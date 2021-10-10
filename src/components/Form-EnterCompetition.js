@@ -1,20 +1,14 @@
-import {
-  Header,
-  Text,
-  Heading,
-  Card,
-  Box,
-  TextInput,
-  Button,
-  Spinner,
-} from "grommet";
+import { Text, TextInput, Button, Spinner } from "grommet";
 import { useState } from "react";
 import styled from "styled-components";
 
-const EnterSneakySweepForm = ({ onSubmit, loading }) => {
+const EnterSneakySweepForm = ({ onSubmit, loading, error, clearError }) => {
   const [value, setValue] = useState("");
 
-  const onChange = (event) => setValue(event.target.value);
+  const onChange = (event) => {
+    error && clearError && clearError();
+    setValue(event.target.value);
+  };
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
@@ -33,9 +27,18 @@ const EnterSneakySweepForm = ({ onSubmit, loading }) => {
         />
       </FormField>
       <FormField>
-        {loading ? <Spinner /> : <Button primary label="Enter Sneaky Sweep!" type="submit" />}
+        {loading ? (
+          <Spinner />
+        ) : (
+          <Button primary label="Enter Sneaky Sweep!" type="submit" />
+        )}
       </FormField>
-      <Text size="small">Note: Transaction may take up to 30 seconds</Text>
+      {error && (
+        <ErrorText color="red" size="small">
+          {error}
+        </ErrorText>
+      )}
+      <Text size="xsmall">Note: Transaction may take up to 30 seconds</Text>
     </Form>
   );
 };
@@ -49,6 +52,10 @@ const Form = styled.form`
 
 const FormField = styled.div`
   padding: 10px;
+`;
+
+const ErrorText = styled(Text)`
+  margin-bottom: 10px;
 `;
 
 export default EnterSneakySweepForm;
