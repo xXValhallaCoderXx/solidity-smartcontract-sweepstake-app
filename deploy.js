@@ -1,8 +1,9 @@
 require("dotenv").config();
+const fs = require("fs");
 const HDWalletProvider = require("truffle-hdwallet-provider");
 const Web3 = require("web3");
 
-const sweepstakeContract = require("./compile");
+const { abi, bytecode } = require("./compile");
 
 const provider = new HDWalletProvider(
   process.env.WALLET_MNEMONIC,
@@ -15,14 +16,20 @@ const deploy = async () => {
   // Lets assume the first account of this wallet is the holder
   const accounts = await web3.eth.getAccounts();
 
-  const result = await new web3.eth.Cotract(
-    JSON.parse(sweepstakeContract.interface)
-  )
+  const result = await new web3.eth.Contract(abi)
     .deploy({
-      data: sweepstakeContract.bytecode,
+      data: bytecode,
     })
     .send({ gas: "1000000", from: accounts[0] });
 
-  console.log("Contract Interface: ", sweepstakeContract.interface);
-  console.log("Contract deployed to: ", result.options.address);
+  const address = result.options.address;
+  console.log("Contract deployed to: ", address);
+
+  // Write contract to JSON for app to consume
+  fs.writeFileSync(
+    "sweepstake-contract.json",
+    JSON.stringify({ address, abi })
+  );
 };
+
+deploy();
