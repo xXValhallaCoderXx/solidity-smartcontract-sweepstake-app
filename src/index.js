@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import "./index.css";
 import App from "./root-routes";
 import reportWebVitals from "./reportWebVitals";
@@ -10,9 +10,9 @@ import { grommet } from "grommet/themes";
 ReactDOM.render(
   <React.StrictMode>
     <Grommet theme={grommet}>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </Grommet>
   </React.StrictMode>,
   document.getElementById("root")
