@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/xXValhallaCoderXx/solidity-smartcontract-sweepstake-app/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/xXValhallaCoderXx/solidity-smartcontract-sweepstake-app/static/js/main.7a8a46c4.chunk.js",
+    "main.js.map": "/xXValhallaCoderXx/solidity-smartcontract-sweepstake-app/static/js/main.7a8a46c4.chunk.js.map",
+    "runtime-main.js": "/xXValhallaCoderXx/solidity-smartcontract-sweepstake-app/static/js/runtime-main.d69d472c.js",
+    "runtime-main.js.map": "/xXValhallaCoderXx/solidity-smartcontract-sweepstake-app/static/js/runtime-main.d69d472c.js.map",
+    "static/js/2.0dfa16f9.chunk.js": "/xXValhallaCoderXx/solidity-smartcontract-sweepstake-app/static/js/2.0dfa16f9.chunk.js",
+    "static/js/2.0dfa16f9.chunk.js.map": "/xXValhallaCoderXx/solidity-smartcontract-sweepstake-app/static/js/2.0dfa16f9.chunk.js.map",
+    "static/js/3.0a9243ab.chunk.js": "/xXValhallaCoderXx/solidity-smartcontract-sweepstake-app/static/js/3.0a9243ab.chunk.js",
+    "static/js/3.0a9243ab.chunk.js.map": "/xXValhallaCoderXx/solidity-smartcontract-sweepstake-app/static/js/3.0a9243ab.chunk.js.map",
+    "index.html": "/xXValhallaCoderXx/solidity-smartcontract-sweepstake-app/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/xXValhallaCoderXx/solidity-smartcontract-sweepstake-app/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.0dfa16f9.chunk.js.LICENSE.txt": "/xXValhallaCoderXx/solidity-smartcontract-sweepstake-app/static/js/2.0dfa16f9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d69d472c.js",
+    "static/js/2.0dfa16f9.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.7a8a46c4.chunk.js"
+  ]
+}
